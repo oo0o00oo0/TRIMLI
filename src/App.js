@@ -1,25 +1,99 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+
+import styled from "styled-components"
+import TitlePage from "./pages/Title/TitlePage"
+import TeamPage from "./pages/Team/TeamPage"
+import WorkLayout from "./components/WorkLayout/WorkLayout"
+import { isMobile } from "react-device-detect"
+
+const forme = {
+  name: "PROJECT: Forme Sauvage",
+  id: "forme",
+  p: "Public Art Project",
+  text: `Forme Sauvage is a sensory installation that acts as a refreshment
+          from the warm and crouded streets of Montpellier in France. The
+          project embodies the fluid and ephemeral nature of scents in its form,
+          using innovative design methods such as thermal distortion to mould
+          pink hued sheets. Suspended at the center of a courtyard, the
+          installation fuctions as a a small weather machine and an air mister,
+          surprising visitors by introducing unexpected dimensions of
+          interaction through natural scents and ingredients weaved with design.`,
+  images: [
+    { name: 1, gridCol: "1 / span 5", gridRow: "1 / span 4" },
+    { name: 2, gridCol: "1 / span 5", gridRow: "5 / span 4" },
+    { name: 3, gridCol: "1 / span 5", gridRow: "9 / span 4" },
+    { name: 4, gridCol: "6 / span 5", gridRow: "1 / span 5" },
+    { name: 5, gridCol: "6 / span 5", gridRow: "6 / span 7" },
+  ],
+  pageHeight: 50,
+
+  pageHeightMob: 260,
+}
+
+const palms = {
+  name: "Project: Illuminated Palms",
+  id: "palms",
+  p: "Public Art & Lighting Design (Currently Under Development)",
+  text: `Illuminated Palms is a pulic art project for Nassau Cruise Port encompassing large scale lighting and screen design, digital art content, immersive gallery and community workshops. A gateway to the historic, vibrant city of Nassau, the new port, which is the economic hub of the downtown core, is currently being transformed into a visual masterpiece that will convert the facility into one of the great waterfronts of the world. Initial renderings explore different design approaches of using LED bars to highlight architectural elements of the building versus using colorful LED lights to project on the mesh skin that would simultaneously function as shading.`,
+  images: [
+    { name: 1, gridCol: "1 / span 9", gridRow: "1 / span 4" },
+    { name: 2, gridCol: "1 / span 9", gridRow: "5 / span 4" },
+  ],
+  pageHeight: 50,
+  pageHeightMob: 240,
+}
+const festival = {
+  name: "Project: The People's Lot for san diego open house festival ",
+  id: "festival",
+  p: "Public Installation (Currently Under Development)",
+  text: `The People’s Lot is an exciting opportunity to bring together various social groups - children, parents, activists, English speakers, Spanish speakers, students, faculty and more - in both its design and function. Already a space for gardening and food production, concerts and protests, classrooms and leisure, the existing privately owned public oriented space is a beacon for community activity. As a new mixed-use building rises next door, designed by local architecture Professor Hector Perez, The People’s Lot is looking to leverage design as a vehicle to amplify its existing civic objectives.
+`,
+  images: [
+    { name: 1, gridCol: "1 / span 9", gridRow: "1 / span 4" },
+    { name: 2, gridCol: "1 / span 5", gridRow: "5 / span 4" },
+    { name: 3, gridCol: "1 / span 5", gridRow: "9 / span 4" },
+    { name: 4, gridCol: "6 / span 4", gridRow: "5 / span 8" },
+  ],
+  pageHeight: 50,
+
+  pageHeightMob: 280,
+}
+const east = {
+  name: "Project: Digital East",
+  id: "east",
+  p: "Interactive Installation and Website",
+  text: `Digital East is a fully interactive and navigable application for use within marketing suites via touchscreen navigation.  The app introduced a smart Apartment Finder with real-time availability, unit spec, CGI stills, animations and 360 Tours. We created a fully explorable 3D representation of the scheme to be visited as both a digital and physical sales gallery.
+Accessible from any device, anywhere in the world, Digital East was the prime tool for international sales of the development.`,
+  images: [
+    { name: 1, gridCol: "1 / span 9", gridRow: "1 / span 4" },
+    { name: 2, gridCol: "1 / span 5", gridRow: "5 / span 4" },
+    { name: 3, gridCol: "1 / span 5", gridRow: "9 / span 4" },
+    { name: 4, gridCol: "6 / span 4", gridRow: "5 / span 8" },
+  ],
+  pageHeight: 70,
+
+  pageHeightMob: 2,
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Container>
+      <TitlePage />
+      <TeamPage />
+      <WorkLayout project={forme} />
+      <WorkLayout project={palms} />
+      <WorkLayout project={festival} />
+      <WorkLayout project={east} />
+    </Container>
+  )
 }
 
-export default App;
+const Container = styled.div`
+  /* height: 900vh; */
+
+  height: ${isMobile ? 800 : 900}vh;
+
+  background: #121212;
+`
+
+export default App
