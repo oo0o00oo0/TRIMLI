@@ -168,7 +168,6 @@ const FullPage = styled.div`
   /* height: ${isMobile ? 150 : 100}vh; */
   padding: ${isMobile ? 2 : 3}rem;
   color: #eaeaea;
-  border-bottom: white solid 1px;
 
   position: relative;
 `
