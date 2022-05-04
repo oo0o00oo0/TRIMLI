@@ -67,8 +67,8 @@ Accessible from any device, anywhere in the world, Digital East was the prime to
   images: [
     { name: 1, gridCol: "1 / span 9", gridRow: "1 / span 4" },
     { name: 2, gridCol: "1 / span 5", gridRow: "5 / span 4" },
-    { name: 3, gridCol: "1 / span 5", gridRow: "9 / span 4" },
-    { name: 4, gridCol: "6 / span 4", gridRow: "5 / span 8" },
+    // { name: 3, gridCol: "1 / span 5", gridRow: "9 / span 4" },
+    { name: 3, gridCol: "6 / span 4", gridRow: "5 / span 8" },
   ],
   pageHeight: 70,
 

@@ -123,7 +123,6 @@ const FullPage = styled.div`
 const Para = styled.div`
   flex: 1;
   text-align: left;
-  /* margin-left: ${isMobile ? 5 : 3}vw; */
   height: ${isMobile ? 5 : 7}vw;
   margin-bottom: 50px;
 `
@@ -131,14 +130,13 @@ const Para = styled.div`
 const Info = styled.div`
   display: flex;
   flex-direction: column;
-  /* width: 30vw; */
   width: ${isMobile ? 70 : 30}vw;
   align-items: flex-start;
   justify-content: flex-start;
 `
 
 const Img = styled.div`
-  border: #d2d2d2 solid 1px;
+  border: #5b5b5b solid 1px;
   width: 100%;
   height: 100%;
   background-size: cover;
