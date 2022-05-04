@@ -116,7 +116,6 @@ const ImgWrapper = styled.div`
 const FullPage = styled.div`
   padding: ${isMobile ? 2 : 3}rem;
   color: #eaeaea;
-
   position: relative;
 `
 
@@ -136,7 +135,6 @@ const Info = styled.div`
 `
 
 const Img = styled.div`
-  border: #5b5b5b solid 1px;
   width: 100%;
   height: 100%;
   background-size: cover;

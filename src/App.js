@@ -5,6 +5,7 @@ import TitlePage from "./pages/Title/TitlePage"
 import TeamPage from "./pages/Team/TeamPage"
 import WorkLayout from "./components/WorkLayout/WorkLayout"
 import { isMobile } from "react-device-detect"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 const forme = {
   name: "PROJECT: Forme Sauvage",
@@ -65,10 +66,10 @@ const east = {
   text: `Digital East is a fully interactive and navigable application for use within marketing suites via touchscreen navigation.  The app introduced a smart Apartment Finder with real-time availability, unit spec, CGI stills, animations and 360 Tours. We created a fully explorable 3D representation of the scheme to be visited as both a digital and physical sales gallery.
 Accessible from any device, anywhere in the world, Digital East was the prime tool for international sales of the development.`,
   images: [
-    { name: 1, gridCol: "1 / span 9", gridRow: "1 / span 4" },
-    { name: 2, gridCol: "1 / span 5", gridRow: "5 / span 4" },
+    { name: 1, gridCol: "1 / span 9", gridRow: "1 / span 6" },
+    { name: 2, gridCol: "1 / span 6", gridRow: "7 / span 4" },
     // { name: 3, gridCol: "1 / span 5", gridRow: "9 / span 4" },
-    { name: 3, gridCol: "6 / span 4", gridRow: "5 / span 8" },
+    { name: 3, gridCol: "7 / span 3", gridRow: "7 / span 10" },
   ],
   pageHeight: 70,
 
@@ -77,16 +78,59 @@ Accessible from any device, anywhere in the world, Digital East was the prime to
 
 function App() {
   return (
-    <Container>
-      <TitlePage />
-      <TeamPage />
-      <WorkLayout project={forme} />
-      <WorkLayout project={palms} />
-      <WorkLayout project={festival} />
-      <WorkLayout project={east} />
-    </Container>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Container>
+              <TitlePage />
+              <TeamPage />
+              <WorkLayout project={forme} />
+              <WorkLayout project={palms} />
+              <WorkLayout project={festival} />
+              <WorkLayout project={east} />
+            </Container>
+          }
+        />
+        <Route path="skywall" element={<Skywall />} />
+        {/* <Route path="invoices" element={<Invoices />} /> */}
+      </Routes>
+    </BrowserRouter>
   )
 }
+function Skywall() {
+  return (
+    <div
+      style={{
+        width: "100vw",
+        height: "100vh",
+      }}
+    >
+      ,
+      <Frame
+        title="t"
+        src="https://irembugdayci.wixsite.com/skywall"
+        frameborder="0"
+      ></Frame>
+    </div>
+  )
+}
+
+const Frame = styled.iframe`
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  z-index: 999999;
+`
 
 const Container = styled.div`
   /* height: 900vh; */
