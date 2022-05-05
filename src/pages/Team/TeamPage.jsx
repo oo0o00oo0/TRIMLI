@@ -33,7 +33,7 @@ function TeamPage() {
         </Para>
         {Names.map((e, i) => (
           <>
-            <Header e={e} i={i} />
+            <Header e={e} i={i + 1} />
           </>
         ))}
       </Info>

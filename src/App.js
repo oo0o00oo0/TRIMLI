@@ -35,7 +35,7 @@ const palms = {
   name: "Project: Illuminated Palms",
   id: "palms",
   p: "Public Art & Lighting Design (Currently Under Development)",
-  text: `Illuminated Palms is a pulic art project for Nassau Cruise Port encompassing large scale lighting and screen design, digital art content, immersive gallery and community workshops. A gateway to the historic, vibrant city of Nassau, the new port, which is the economic hub of the downtown core, is currently being transformed into a visual masterpiece that will convert the facility into one of the great waterfronts of the world. Initial renderings explore different design approaches of using LED bars to highlight architectural elements of the building versus using colorful LED lights to project on the mesh skin that would simultaneously function as shading.`,
+  text: `Illuminated Palms is a pulic art project for a Cruise Port encompassing large scale lighting and screen design, digital art content, immersive gallery and community workshops. A gateway to the historic, vibrant city, the new port, which is the economic hub of the downtown core, is currently being transformed into a visual masterpiece that will convert the facility into one of the great waterfronts of the world. Initial renderings explore different design approaches of using LED bars to highlight architectural elements of the building versus using colorful LED lights to project on the mesh skin that would simultaneously function as shading.`,
   images: [
     { name: 1, gridCol: "1 / span 9", gridRow: "1 / span 4" },
     { name: 2, gridCol: "1 / span 9", gridRow: "5 / span 4" },
