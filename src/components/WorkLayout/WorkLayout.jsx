@@ -11,7 +11,7 @@ function WorkLayout({ project }) {
       }}
     >
       <Info>
-        <Header e={project} i={1} />
+        <Header e={project} i={project.num} />
         <Para>{project.text}</Para>
       </Info>
 
@@ -63,7 +63,7 @@ function WorkLayout({ project }) {
 export function Header({ e, i }) {
   return (
     <HeaderWrapper>
-      <Number>0{i}</Number>
+      <Number>{i}</Number>
       <ContentWrapper>
         <ImgerTitle>{e.name}</ImgerTitle>
         <ImgerPara>{e.p}</ImgerPara>

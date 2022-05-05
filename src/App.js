@@ -8,6 +8,7 @@ import { isMobile } from "react-device-detect"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 const forme = {
+  num: "01",
   name: "PROJECT: Forme Sauvage",
   id: "forme",
   p: "Public Art Project",
@@ -32,6 +33,7 @@ const forme = {
 }
 
 const palms = {
+  num: "02",
   name: "Project: Illuminated Palms",
   id: "palms",
   p: "Public Art & Lighting Design (Currently Under Development)",
@@ -44,6 +46,8 @@ const palms = {
   pageHeightMob: 240,
 }
 const festival = {
+  num: "03",
+
   name: "Project: The People's Lot for san diego open house festival ",
   id: "festival",
   p: "Public Installation (Currently Under Development)",
@@ -60,6 +64,8 @@ const festival = {
   pageHeightMob: 280,
 }
 const east = {
+  num: "04",
+
   name: "Project: Digital East",
   id: "east",
   p: "Interactive Installation and Website",
